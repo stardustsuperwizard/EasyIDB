@@ -1,6 +1,47 @@
 # EasyIDB
  Simple API wrapper for interacting with IndexedDB
 
+# How to use:
+To use the library instantiate the class:
+```javascript
+tables = [
+    {
+        'name': 'Table1',
+        'options': {
+            autoIncrement: true,
+            keyPath: 'id'
+        }
+    },
+    {
+        'name': 'Table2',
+        'options': {
+            autoIncrement: true,
+            keyPath: 'id'
+        }
+    },
+    {
+        'name': 'Table3',
+        'options': {
+            autoIncrement: true,
+            keyPath: 'id'
+        }
+    }
+]
+const idb = new EasyIDB('mainDB', tables, 1);
+idb.getDB();
+```
+
+Tables (ObjectStores) can then be used and added to:
+```javascript
+idb.createEntry('Table1', {'Statement': 'Hello World'})
+```
+
+Entries can be deleted by KeyPath:
+```javascript
+ibd.deleteEntry('Table1', 1)
+```
+
+
  # Credits
  Based off of the following tutorial: https://www.raymondcamden.com/2019/10/16/using-indexeddb-with-vuejs
 
