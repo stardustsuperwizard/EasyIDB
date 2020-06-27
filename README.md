@@ -2,7 +2,7 @@
  Simple API wrapper for interacting with IndexedDB
 
 # How to use:
-To use the library instantiate the class:
+To use the library, instantiate the class:
 ```javascript
 tables = [
     {
