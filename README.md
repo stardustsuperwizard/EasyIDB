@@ -31,7 +31,7 @@ const idb = new EasyIDB('mainDB', tables, 1);
 idb.getDB();
 ```
 
-Tables (ObjectStores) can then be used and added to:
+Entries can then be added to tables (ObjectStores):
 ```javascript
 idb.createEntry('Table1', {'Statement': 'Hello World'})
 ```
