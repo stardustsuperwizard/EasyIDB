@@ -10,7 +10,23 @@ tables = [
         'options': {
             autoIncrement: true,
             keyPath: 'id'
-        }
+        },
+        'index': [
+            {
+                indexName: 'value1',
+                keyPath: 'value1',
+                objectParameters: {
+                    unique: false
+                }
+            },
+            {
+                indexName: 'value2',
+                keyPath: 'value2',
+                objectParameters: {
+                    unique: true
+                }
+            },
+        ]
     },
     {
         'name': 'Table2',
