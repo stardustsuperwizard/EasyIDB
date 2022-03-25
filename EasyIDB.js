@@ -76,12 +76,12 @@ class EasyIDB {
         let db = await this.getDB()
         return new Promise(resolve => {
             let trans = db.transaction([table], 'readwrite');
-            trans.oncomplete = () => {
-                resolve();
+            trans.oncomplete = (event) => {
+                resolve(request);
             };
 
             let store = trans.objectStore(table);
-            store.put(entry);
+            let request = store.put(entry);
         });
     }
 
